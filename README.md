@@ -13,3 +13,5 @@ work):
 library(shiny)
 runApp('SLIPT')
 ```
+
+Note - a correctly formated data file is also required to run the SLIPT tool.  This has not yet been added to the repository.
