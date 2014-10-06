@@ -12,13 +12,21 @@ shinyUI(pageWithSidebar(
   # area immediately as you type
   sidebarPanel(
     textInput("caption", "Caption:", "Predicted Synthetic Lethal Interactions"),
-    
+
+  # Remove some of these options for now to reduce the data file being uploaded to github    
     selectInput("dataset", "Choose a cancer type for dataset:", 
-                choices = c("Brain - Glioblastoma", "Brain - Lower Grade Glioma", "Breast - Invasive Carcinoma", "Colon - Adenocarcinoma",
-                            "Kidney - Clear Cell Carcinoma", "Leukemia (AML)", "Lung - Adenocarcinoma", "Lung - Squamous Cell Carcinoma",
-                            "Low Grade Brain", "Ovarian - Serious Cystadenocarcinoma",
+                choices = c(#"Brain - Glioblastoma", 
+                            #"Brain - Lower Grade Glioma", 
+                            "Breast - Invasive Carcinoma", 
+                            #"Colon - Adenocarcinoma",
+                            #"Kidney - Clear Cell Carcinoma", "Leukemia (AML)", 
+                            #"Lung - Adenocarcinoma", "Lung - Squamous Cell Carcinoma",
+                            #"Low Grade Brain", 
+                            #"Ovarian - Serious Cystadenocarcinoma",
                             #"Stomach - Adenocarinoma" ,
-                            "Rectum - Adenocarcinoma", "Uterine Corpus Endometrioid Carcinoma", "Colorectal - Adenocarcinoma"),
+                            #"Rectum - Adenocarcinoma", 
+                            #"Uterine Corpus Endometrioid Carcinoma", 
+                            "Colorectal - Adenocarcinoma"),
                 selected="Breast - Invasive Carcinoma"),
     
     checkboxInput("choosesubset", "Elect to subset dataset:"),

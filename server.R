@@ -5,7 +5,7 @@ options(shiny.deprecation.messages=FALSE)
 #load("~/Downloads/Dissertation/TCGA data/NormalisedTCGA.RData")
 #load("C:/Users/Tom Kelly/Documents/4th year 2013/Dissertation/NormalisedTCGA_parameters.RData")
 #load("NormalisedTCGA_parameters.RData")
-load("mikSLIPT.RData")
+load("mikSLIPT-small.RData")
 
 #input<-list("Breast", "CDH1", 10)
 #names(input)<-c("dataset", "query", "obs")
@@ -26,19 +26,20 @@ shinyServer(function(input, output) {
   #names(kp)<-c("Breast", "Colon", "Ovarian", "Rectum", "Stomach", "Colorectal")
   datasetInput <- reactive({
   switch(input$dataset,
-         "Brain - Glioblastoma" = DataMatrixBrainNorm,
+# Remove some of these options for now to reduce the data file being uploaded to github
+#         "Brain - Glioblastoma" = DataMatrixBrainNorm,
          "Breast - Invasive Carcinoma" = DataMatrixBreastNorm,
-           "Colon - Adenocarcinoma" = DataMatrixColonNorm,
-          "Kidney - Clear Cell Carcinoma" = DataMatrixKidneyNorm,
-         "Leukemia (AML)"= DataMatrixLeukemiaNorm,
-         "Lung - Adenocarcinoma" = DataMatrixLungNorm,
-         "Lung - Squamous Cell Carcinoma" = DataMatrixLungSquamousCellNorm,
-         "Brain - Lower Grade Glioma" = DataMatrixLowGradeBrainNorm,
-         "Ovarian - Serious Cystadenocarcinoma" = DataMatrixOvarianNorm,
-           "Rectum - Adenocarcinoma" = DataMatrixRectumNorm,
-         "Uterine Corpus Endometrioid Carcinoma" = DataMatrixUterineEndometrialNorm,
-           #"Stomach - Adenocarinoma" = DataMatrixStomachNorm,
-           "Colorectal - Adenocarcinoma" = DataMatrixColorectalNorm
+#         "Colon - Adenocarcinoma" = DataMatrixColonNorm,
+#         "Kidney - Clear Cell Carcinoma" = DataMatrixKidneyNorm,
+#         "Leukemia (AML)"= DataMatrixLeukemiaNorm,
+#         "Lung - Adenocarcinoma" = DataMatrixLungNorm,
+#         "Lung - Squamous Cell Carcinoma" = DataMatrixLungSquamousCellNorm,
+#         "Brain - Lower Grade Glioma" = DataMatrixLowGradeBrainNorm,
+#         "Ovarian - Serious Cystadenocarcinoma" = DataMatrixOvarianNorm,
+#         "Rectum - Adenocarcinoma" = DataMatrixRectumNorm,
+#         "Uterine Corpus Endometrioid Carcinoma" = DataMatrixUterineEndometrialNorm,
+#         "Stomach - Adenocarinoma" = DataMatrixStomachNorm,
+         "Colorectal - Adenocarcinoma" = DataMatrixColorectalNorm
     )
   })
   #Take Columns of chosen Samples
