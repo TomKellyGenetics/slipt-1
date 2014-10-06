@@ -9,6 +9,7 @@ together in a folder (e.g., a directory called "SLIPT").  The following commands
 to initialize the interface (note that the SLIPT folder needs to be within the working directory for this code to
 work):
 
+```
 library(shiny)
 runApp('SLIPT')
-
+```
