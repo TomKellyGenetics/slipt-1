@@ -1,10 +1,6 @@
 library(shiny)
 options(shiny.deprecation.messages=FALSE)
 
-#setwd("~/Downloads/Dissertation/TCGA data/")
-#load("~/Downloads/Dissertation/TCGA data/NormalisedTCGA.RData")
-#load("C:/Users/Tom Kelly/Documents/4th year 2013/Dissertation/NormalisedTCGA_parameters.RData")
-#load("NormalisedTCGA_parameters.RData")
 load("mikSLIPT-small.RData")
 
 #input<-list("Breast", "CDH1", 10)
